@@ -1,5 +1,6 @@
 pi = 3.14159
 # Faz a entrada de uma linha de dados e converte os dados para float.
+
 A, B, C = [float(x) for x in input().split(" ")]
 
 triangle = (A * C) / 2
