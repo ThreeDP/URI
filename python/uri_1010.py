@@ -1,6 +1,0 @@
-pc1, pu1, pp1 = input().split(" ")
-pc2, pu2, pp2 = input().split(" ")
-pc1 = int(pc1)
-pc2 = int(pc2)
-total = float(int(pu1) * float(pp1) + int(pu2) * float(pp2))
-print("VALOR A PAGAR: R$ {:.2f}".format(total))
