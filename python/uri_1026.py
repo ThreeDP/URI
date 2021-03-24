@@ -3,7 +3,7 @@ def dec_bin(n): #Converte de decimal para binario.
     while n != 0:
         b.append(int(n % 2))
         n = int(n / 2)
-    while len(b) < 8:
+    while len(b) < 32:
         b.append(int(0))
     return b[::-1] # Inverte a string.
 
@@ -27,8 +27,12 @@ def calc(number): #Realiza o calculo lógico necessario.
     R = bin_dec(result)
     return R
 
-number_A = [int(x) for x in input().split(" ")]
-number_B = [int(y) for y in input().split(" ")]
+if __name__ == "__main__":
+    while True:
+        try:
+            number_A = [int(x) for x in input().split(" ")]
+            number_B = [int(y) for y in input().split(" ")]
+        except EOFError:
+            break
 
-print(calc(number_A))
-print(calc(number_B))
+    print("{}\n{}".format(calc(number_A), calc(number_B)))
