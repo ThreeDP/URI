@@ -6,13 +6,13 @@ using namespace std;
 #define n 3.14159
 
 int main() {
-    float A, R;
-    cout << setprecision(8);
-    setiosflags(ios::left);
-    setiosflags(ios::showpoint);
+    cout << fixed;
+    cout << setprecision(4);
+    double A, R;
+
+
     cin >> R;
-    
-    A = n * pow(R, 2.0);
+    A = n * pow(R, 2.00);
     cout << "A=" << A << "\n";
     
     cin.get();
