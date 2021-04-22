@@ -1,5 +1,3 @@
-import time
-import timeit
 M = int(input())
 v = []
 primos = []
@@ -10,17 +8,8 @@ while True:
         for i in range(0, M, 1):
             v.append(int(input()))
     except EOFError:
-        if dividers == True:
-            print("You're a coastal aircraft, Robbie, a large silver aircraft.")
-            break
-        else:
-            print("Bad boy! I'll hit you")
-            v.clear()
-            primos.clear()
-            continue
+        break
         
-
-    #start = timeit.default_timer()
     result = 0
     n = int(input())
 
@@ -43,7 +32,7 @@ while True:
             try: 
                 ip = primos.index(lr)
                 del(primos[ip])
-                print(primos)
+                #print(primos)
             except:
                 continue
         if p == 11 and primos[-1] == result:
@@ -51,8 +40,11 @@ while True:
             break
         elif p == 11:
             break
-    stop = timeit.default_timer()
-    print("time: {}".format(stop - start))
 
-
-
+    if dividers == True:
+        print("You're a coastal aircraft, Robbie, a large silver aircraft.")
+        continue
+    else:
+        print("Bad boy! I'll hit you")
+        v.clear()
+        primos.clear()
