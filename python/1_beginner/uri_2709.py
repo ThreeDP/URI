@@ -11,14 +11,7 @@ while True:
 
     result_number = 0
     # Soma de acordo com salto.
-    check = coins - 1
-    print(check, coins_values)
-    while check >= 0:
-        result_number += coins_values[check]
-        check -= jump_number
-        print(check)
-
-    print(result_number)        
+    result_number = sum(coins_values[-1::-jump_number])
 
     cont = 0
     for j in range(result_number):
